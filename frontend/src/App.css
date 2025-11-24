@@ -1,0 +1,456 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left h1 {
+  font-size: 1.8rem;
+}
+
+.nav-center {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.user-name {
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Auth Forms */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.auth-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form h2 {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.auth-form input,
+.auth-form select {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.2);
+}
+
+.auth-form button {
+  background: #667eea;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.auth-form button:hover {
+  background: #5568d3;
+}
+
+/* Dashboard */
+.dashboard {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1 {
+  color: #667eea;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* User Management */
+.user-management {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.users-table th {
+  background: #667eea;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.users-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.users-table tr:hover {
+  background: #f9f9f9;
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background: #5568d3;
+}
+
+/* Create Blog */
+.create-blog {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.create-blog form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.create-blog input,
+.create-blog textarea {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.create-blog button {
+  background: #667eea;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.create-blog button:hover {
+  background: #5568d3;
+}
+
+/* Blogs Grid */
+.public-blogs,
+.author-blogs {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.blog-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #ddd;
+}
+
+.blog-card:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card .author {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.blog-card .excerpt {
+  color: #999;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+/* Blog Detail */
+.blog-detail {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-detail button {
+  background: #667eea;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.blog-detail h1 {
+  color: #333;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.blog-detail .author {
+  color: #999;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-detail img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.blog-body {
+  line-height: 1.8;
+  color: #333;
+  margin: 2rem 0;
+}
+
+.engagement {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.engagement button,
+.engagement span {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.engagement span {
+  background: #999;
+  cursor: default;
+}
+
+.comments-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+.comments-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.comments-section textarea {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.comments-section button {
+  background: #667eea;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comments-list {
+  margin-top: 1.5rem;
+}
+
+.comment {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 3px solid #667eea;
+}
+
+/* Filter Form */
+.filter-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.filter-form input,
+.filter-form button {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-form button {
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+}
+
+/* Analytics */
+.analytics {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.analytics form {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.analytics input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.analytics button {
+  background: #667eea;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.analytics-result {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+}
+
+.analytics-result p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
